@@ -48,7 +48,7 @@ st.info("Silakan upload gambar atau aktifkan kamera untuk mengambil foto daun ja
 uploaded_file = st.file_uploader("📁 Upload gambar dari perangkat", type=["jpg", "jpeg", "png"])
 
 # --- Kontrol Kamera ---
-with st.expander("📷 Kontrol Kamera"):
+with st.expander("📷 Gunakan Kamera"):
     camera_enabled = st.checkbox("Aktifkan Kamera")
 
 camera_image = None
