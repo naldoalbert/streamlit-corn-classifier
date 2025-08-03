@@ -12,8 +12,8 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🌽 Aplikasi Klasifikasi Penyakit Daun Jagung")
-st.write("Identifikasi penyakit daun jagung dengan mudah menggunakan gambar!")
+st.title("Deteksi Penyakit Daun Jagung🌽")
+st.write("Identifikasi dini penyakit pada daun jagung Anda dengan mudah\nmenggunakan teknologi AI. Dapatkan hasil prediksi akurat dalam\nhitungan detik.")
 
 # --- Load Model ---
 @st.cache_resource
@@ -24,10 +24,10 @@ model = load_model()
 
 LABELS = ['Blight', 'Common_Rust', 'Gray_Leaf_Spot', 'Healthy']
 DESCRIPTIONS = {
-    'Blight': "Hawar Daun: Lesi elips coklat tua atau abu-abu.",
-    'Common_Rust': "Karat Daun: Pustula oranye kemerahan oleh jamur.",
-    'Gray_Leaf_Spot': "Bercak Daun Abu: Bercak abu-abu persegi panjang.",
-    'Healthy': "Sehat: Daun hijau tanpa bercak atau lesi."
+    'Blight': "Penyakit Blight (Hawar Daun) disebabkan oleh jamur. Ciri-cirinya adalah lesi lonjong berwarna coklat keabu-abuan yang muncul di daun, seringkali dengan batas yang jelas.",
+    'Common_Rust': "Penyakit Karat Umum ditandai dengan pustula kecil berwarna oranye-coklat yang timbul, terutama pada permukaan atas daun. Dapat menyebar dengan cepat dalam kondisi lembab.",
+    'Gray_Leaf_Spot': "Gray Leaf Spot menyebabkan lesi panjang, sempit, berwarna abu-abu kehijauan pada daun. Lesi ini seringkali berbentuk persegi panjang dan dibatasi oleh urat daun.",
+    'Healthy': "Daun jagung Anda terlihat sehat! Terus jaga kondisi tanaman Anda dengan baik."
 }
 
 def predict_image(img):
